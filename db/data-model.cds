@@ -28,6 +28,7 @@ context EmployeeDetails {
         contractStarted : Date;
         email           : types.Email not null;
         phone           : types.PhoneNumber not null;
+        age             : Integer;
         address         : Composition of many Address
                             on address.employee = $self; // Self means the Primary key of the current table
         department      : Association to one OrganizationDetails.Department;
